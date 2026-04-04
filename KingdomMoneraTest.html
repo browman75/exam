@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>第五站：原核生物界小測驗</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --dora-blue: #0096D6;
+            --dora-red: #E3001B;
+            --dora-yellow: #FFD900;
+            --pure-white: #FFFFFF;
+            --bg-color: #E8F6FC;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 20px;
+            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: #333;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* 卡片共用樣式 */
+        .card-box {
+            background-color: var(--pure-white);
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow: 0 8px 20px rgba(0, 150, 214, 0.1);
+            border: 3px solid rgba(0, 150, 214, 0.2);
+            margin-bottom: 32px;
+        }
+
+        .section-title {
+            color: var(--dora-blue);
+            font-size: 28px;
+            font-weight: 900;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 3px dashed var(--dora-yellow);
+            padding-bottom: 8px;
+        }
+
+        /* 下一頁按鈕樣式 */
+        .btn-red {
+            background-color: var(--dora-red);
+            box-shadow: 0 6px 0 #B30015;
+            color: white;
+            border-radius: 999px;
+            padding: 16px 32px;
+            font-size: 24px;
+            font-weight: 900;
+            cursor: pointer;
+            transition: all 0.1s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+        .btn-red:active { 
+            transform: translateY(6px); 
+            box-shadow: 0 0 0 #B30015; 
+        }
+
+        /* 讓 iframe 在 iPad 上有更好的捲動體驗 */
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            height: 80vh; /* 預設高度為螢幕高度的 80% */
+            min-height: 600px;
+            border-radius: 16px;
+            overflow: hidden;
+            background-color: #f8fafc;
+            border: 2px solid var(--dora-blue);
+        }
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body class="pb-24">
+
+    <!-- 頂部導航 -->
+    <header class="bg-white shadow-md sticky top-0 z-40">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="font-black text-[var(--dora-blue)] text-2xl flex items-center gap-2">
+                <i class="fa-solid fa-file-signature"></i>
+                原核生物界小測驗
+            </div>
+            <div class="text-sm font-bold text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
+                綜合評量
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 mt-8">
+        
+        <!-- ================= 測驗說明與表單區塊 ================= -->
+        <section class="card-box">
+            <h2 class="section-title">
+                <i class="fa-solid fa-clipboard-question"></i> 實力檢測時間
+            </h2>
+            
+            <div class="bg-yellow-50 p-4 rounded-xl border border-[var(--dora-yellow)] mb-6 flex items-start gap-4 shadow-sm">
+                <i class="fa-solid fa-bell-concierge text-3xl text-[var(--dora-red)] mt-1"></i>
+                <div>
+                    <p class="font-bold text-gray-800">
+                        經過前面的探險，相信你已經對「原核生物」與「原生生物」有了深入的了解！
+                        <br>
+                        請在下方完成學習成果小測驗，作答完畢並送出後，點擊最下方的任意門前往下一站！
+                    </p>
+                </div>
+            </div>
+
+            <!-- Google 表單嵌入區 -->
+            <div class="iframe-container shadow-inner">
+                <!-- 
+                  TODO: 教師請注意！
+                  請將下方 src="..." 裡面的網址，替換成你實際 Google 表單的「傳送 -> 嵌入 HTML」所提供的 src 網址。
+                -->
+                <iframe 
+                    src="https://docs.google.com/forms/d/e/1FAIpQLScEXAMPLE_FORM_ID_HERE/viewform?embedded=true" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0">
+                    載入中…
+                </iframe>
+            </div>
+        </section>
+
+        <!-- ================= 下一頁按鈕 ================= -->
+        <div class="text-center mt-12 mb-16">
+            <!-- 根據需求，連結設定為 CLwevft06efdaw.html -->
+            <a href="CLwevft06efdaw.html" class="btn-red animate-bounce">
+                <i class="fa-solid fa-door-open text-3xl mr-3"></i>
+                完成測驗，前往下一站
+            </a>
+        </div>
+
+    </main>
+
+</body>
+</html>
